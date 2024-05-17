@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="logo-container">
+            <a href="#" class="logo">Warner Bros</a>
+        </div>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li><a style="text-decoration:none"href="index.html">Movies</a></li>
+                <li><a style="text-decoration:none"href="tvshows.html">TV Shows</a></li>
+                <li><a style="text-decoration:none"href="games&apps.html">Games & Apps</a></li>
+                <li><a style="text-decoration:none"href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Warner Bros</h1>
+        <p>Your ultimate destination for all things Entertainment!</p>
+    </div>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slideshow">
+            <div class="mySlides">
+                <img src="Batman.webp" alt="Batman Arkham Knight">
+            </div>
+
+            <div class="mySlides">
+                <img src="venom.jpg" alt="Venom">
+            </div>
+
+            <div class="mySlides">
+                <img src="BlackPanther.jpg" alt="Black Panther">
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <!-- Movie Posters Section -->
+        <div class="container" id="movies">
+            <h1>More Movies</h1>
+            <div class="movies">
+                <div class="movie">
+                    <img src="flash.jpeg" alt="The Flash">
+                    <p>The Flash</p>
+                </div>
+                <div class="movie">
+                    <img src="superman.jpeg" alt="Superman">
+                    <p>Superman</p>
+                </div>
+                <div class="movie">
+                    <img src="barbie.jpg" alt="Barbie">
+                    <p>Barbie</p>
+                </div>
+                <div class="movie">
+                    <img src="goodgirls.jpg" alt="Good Girls">
+                    <p>Good Girls</p>
+                </div>
+                <div class="movie">
+                    <img src="spiderman.jpg" alt="Spider-Man">
+                    <p>Spider-Man</p>
+                </div>
+                <div class="movie">
+                    <img src="hulk.jpg" alt="The Incredible Hulk">
+                    <p>The Incredible Hulk</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Warner Bros</p>
+        </div>
+    </footer>
+</body>
+</html>
